@@ -1,0 +1,11 @@
+@import 'base/_normalize.min.scss';
+@import 'base/_nullstyles.scss';
+@import 'base/_variables.scss';
+@import 'base/_fonts.scss';
+
+* {
+    font-family: $font-main;
+    font-style: normal;
+}
+
+@import 'media/_media.scss';
