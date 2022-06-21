@@ -1,0 +1,1 @@
+{"version":3,"file":"script.js","mappings":";;;;;AAAAA,MAAM,CAACC,gBAAP,CAAwB,kBAAxB,EAA4C,MAAM;EACjD;AAEA,CAHD,E","sources":["webpack://project/./src/js/main.js"],"sourcesContent":["window.addEventListener('DOMContentLoaded', () => {\r\n\t'use strict';\r\n\t\r\n});"],"names":["window","addEventListener"],"sourceRoot":""}
