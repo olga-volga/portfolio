@@ -24,6 +24,16 @@
     }
 }
 
+@keyframes appearance {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.appear {
+    animation-name: appearance;
+    animation-duration: 1s;
+}
+
 @import 'sections/_portfolio.scss';
 
 @import 'media/_media_portfolio.scss';

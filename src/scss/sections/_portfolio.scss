@@ -71,6 +71,7 @@
     }
     &__item {
         width: calc(50% - 40px);
+        transition: 0.4s all;
         margin: 20px;
     }
     &__img {
