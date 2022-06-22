@@ -2,6 +2,49 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/modules/modalImage.js":
+/*!**************************************!*\
+  !*** ./src/js/modules/modalImage.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const modalImage = () => {
+  const imagesParent = document.querySelector('.portfolio__body'),
+        images = document.querySelectorAll('.portfolio__img'),
+        modal = document.querySelector('.modal');
+  imagesParent.addEventListener('click', e => {
+    if (e.target && e.target.nodeName === 'IMG') {
+      images.forEach(item => {
+        if (e.target === item) {
+          let srcPath = e.target.src.slice(e.target.src.indexOf('img'));
+          const imageBig = document.createElement('img');
+          imageBig.setAttribute('alt', e.target.alt);
+          imageBig.setAttribute('src', srcPath);
+          imageBig.classList.add('appear');
+          modal.append(imageBig);
+          modal.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    }
+  });
+  modal.addEventListener('click', e => {
+    if (e.target === modal && modal.style.display !== 'none') {
+      modal.style.display = '';
+      modal.removeChild(modal.firstElementChild);
+      document.body.style.overflow = '';
+    }
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modalImage);
+
+/***/ }),
+
 /***/ "./src/js/modules/tabs.js":
 /*!********************************!*\
   !*** ./src/js/modules/tabs.js ***!
@@ -123,11 +166,14 @@ var __webpack_exports__ = {};
   \************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js");
+/* harmony import */ var _modules_modalImage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/modalImage */ "./src/js/modules/modalImage.js");
+
 
 window.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  (0,_modules_modalImage__WEBPACK_IMPORTED_MODULE_1__["default"])();
 });
 })();
 

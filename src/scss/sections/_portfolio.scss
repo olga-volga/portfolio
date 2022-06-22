@@ -71,7 +71,6 @@
     }
     &__item {
         width: calc(50% - 40px);
-        transition: 0.4s all;
         margin: 20px;
     }
     &__img {
@@ -81,6 +80,7 @@
         box-shadow: 4px 4px 4px rgba($dark, 0.15);
         padding: 20px 20px 30px; 
         margin: 0 auto;
+        cursor: pointer;
     }
     &__descr {
         max-width: 350px;
