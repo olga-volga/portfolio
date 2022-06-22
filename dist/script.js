@@ -15,7 +15,8 @@ __webpack_require__.r(__webpack_exports__);
 const modalImage = () => {
   const imagesParent = document.querySelector('.portfolio__body'),
         images = document.querySelectorAll('.portfolio__img'),
-        modal = document.querySelector('.modal');
+        modal = document.querySelector('.modal'),
+        close = document.querySelector('.modal__close');
   imagesParent.addEventListener('click', e => {
     if (e.target && e.target.nodeName === 'IMG') {
       images.forEach(item => {
@@ -33,9 +34,9 @@ const modalImage = () => {
     }
   });
   modal.addEventListener('click', e => {
-    if (e.target === modal && modal.style.display !== 'none') {
+    if (e.target === modal || e.target === close && modal.style.display !== 'none') {
       modal.style.display = '';
-      modal.removeChild(modal.firstElementChild);
+      modal.removeChild(modal.lastElementChild);
       document.body.style.overflow = '';
     }
   });

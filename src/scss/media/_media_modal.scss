@@ -1,0 +1,10 @@
+.modal {
+    @media (max-width: $md2) {
+        padding: 0 10px;
+        
+        img {
+            height: auto;
+            max-height: 80vh;
+        }
+    }
+}
